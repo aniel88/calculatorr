@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+  top: 100px;
+  color: #333;
+  line-height: 1.5;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: rgb(150, 206, 180);
+}
+
+.container {
+  width: 500px;
+  padding: 0;
+  height: 770px;
+  transition: 0.25s all;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.display {
+  margin: 0;
+  width: 500px;
+  background-color: rgb(199, 0, 57);
+  height: 140px;
+  text-align: right;
+  border-radius: 20px 20px 0 0;
+  transition: 0.25s all;
+}
+
+.numbers {
+  background: rgb(255, 238, 173);
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.number {
+  width: 86px;
+  height: 86px;
+  background-color: rgb(255, 111, 105);
+  padding: 10px;
+  text-align: center;
+  margin: 1px 5px 1px 1px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-align: center;
+  transition: all 0.2s;
+}
+.number:hover {
+  transform: scale(1.1);
+}
+.number p {
+  color: white;
+  font-weight: bold;
+}
+
+.show-text2 {
+  margin-top: -30px;
+  padding-right: 40px;
+  font-size: 30px;
+  color: white;
+}
+.show-text1 {
+  padding-top: 30px;
+  padding-right: 40px;
+  font-size: 30px;
+  color: gray;
+  transition: 0.25s all;
+}
+.operation {
+  background-color: rgb(255, 204, 92);
+}
+.operation-clear {
+  background-color: red;
+  transition: 0.25s all;
+}
