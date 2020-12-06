@@ -1,4 +1,4 @@
-const number = document.querySelectorAll(".number");
+let number = document.querySelectorAll(".number");
 const showText = document.querySelector(".show-text2");
 const clearBtn = document.querySelector(".clear");
 const showTextWriteen = document.querySelector(".show-text1");
@@ -99,3 +99,47 @@ clearBtn.addEventListener("click", function () {
   showText.textContent = "";
   showTextWriteen.textContent = "...";
 });
+
+//Color for calculator
+var xx = document.getElementsByName("type");
+xx[0].checked = true;
+let operation = document.querySelectorAll(".operation");
+let operationClear = document.querySelector(".operation-clear");
+let display = document.querySelector(".display");
+let body = document.querySelector("body");
+let numbers = document.querySelector(".numbers");
+(function getChecked() {
+  var x = document.getElementsByName("type"),
+    i;
+  for (i = 0; i < x.length; i++) {
+    if (x[0].checked) {
+      body.style.backgroundColor = "rgb(150, 206, 180)";
+      for (let j = 0; j < number.length; j++) {
+        number[j].style.backgroundColor = "rgb(255, 111, 105)";
+      }
+      for (let j = 0; j < operation.length; j++) {
+        operation[j].style.backgroundColor = " rgb(255, 204, 92)";
+      }
+      numbers.style.backgroundColor = "rgb(255, 238, 173)";
+      operationClear.style.backgroundColor = "red";
+      display.style.backgroundColor = "rgb(199, 0, 57)";
+      showTextWriteen.style.color = "gray";
+      display.style.backgroundColor = "rgb(199, 0, 57)";
+    } else if (x[1].checked) {
+      body.style.backgroundColor = "rgb(57, 172, 231)";
+      for (let j = 0; j < number.length; j++) {
+        number[j].style.backgroundColor = "rgb(65, 76, 80)";
+      }
+      for (let j = 0; j < operation.length; j++) {
+        operation[j].style.backgroundColor = " rgb(7,132,181)";
+      }
+      showTextWriteen.style.color = "black";
+      operationClear.style.backgroundColor = "black";
+      display.style.backgroundColor = "rgb(7,132,181)";
+      numbers.style.backgroundColor = "rgb(45,56,60)";
+    }
+  }
+  setTimeout(() => {
+    getChecked();
+  }, 500);
+})();
